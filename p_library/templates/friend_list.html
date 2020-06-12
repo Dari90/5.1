@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Список книг</title>
+</head>
+<body>
+    <h2 class="display-4 text-center my-4">Список книг выданных друзьям</h2>
+    {% for friend in friends %}
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group">
+                    <p class="card-header bg-secondary">{{ friend.friend_name }}</p>            <ul class="list-group">
+                            {% for book in friend.books.all %}
+                                <li class="list-group-item"> Книга: {{ book.title }}</li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>  
+    {% endfor %}
+</body>
+</html>
