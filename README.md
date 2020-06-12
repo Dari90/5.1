@@ -1,5 +1,9 @@
-http://127.0.0.1:8000/friend_list/
+Из папки с проектом введите: manage.py runserver
 
-http://127.0.0.1:8000/p/friend/create
+Для админки http://127.0.0.1:8000/admin/ логин: nikki пароль: 123456qa
 
-http://127.0.0.1:8000/p/friends
+Cписок выданных книг:  http://127.0.0.1:8000/friend_list/
+
+Добавление нового друга: http://127.0.0.1:8000/p/friend/create
+
+Список друзей: http://127.0.0.1:8000/p/friends
